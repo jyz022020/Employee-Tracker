@@ -39,8 +39,9 @@ db.query(inputData, (err, rows) => {
 })
 
 console.log(`
-Welcome to Team Profile Generator.
-Please enter your team members's information:
+Welcome to Employee Tracker
+You can view and manage the departments, roles, and employees in your company
+You can organize and plan my business, too!
 `);
 const promptManager = () => {
     return inquirer.prompt([
@@ -91,7 +92,7 @@ const promptManager = () => {
             return addRole();
         } else if (action.userAction === 'Add an employee') {
             return addEmployee();
-        } else if (action.userAction === 'Update an employee role\n') {
+        } else if (action.userAction === 'Update an employee role') {
             console.log("not implement yet");
             return promptManager();
         } 
